@@ -35,10 +35,17 @@ public class BaseballGame {
 		}
 
 		this.answer = new Number(answer.toString());
+
+		//log
+		System.out.println(answer);
 	}
 
 	public void calculateScore(Number number) {
 		score = new Score(answer, number);
+	}
+
+	public boolean isCorrect() {
+		return score.isCorrect();
 	}
 
 	public boolean isFinish() {

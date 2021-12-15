@@ -25,8 +25,10 @@ public class BaseballGameService {
 		ScoreView scoreView = new ScoreView();
 		scoreView.print(baseballGame.getScore());
 
-		StateView stateView = new StateView();
-		baseballGame.setState(stateView.getInput());
+		if (baseballGame.isCorrect()) {
+			StateView stateView = new StateView();
+			baseballGame.setState(stateView.getInput());
+		}
 
 		return baseballGame;
 	}

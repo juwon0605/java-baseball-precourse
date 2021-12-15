@@ -1,5 +1,7 @@
 package baseball.model;
 
+import baseball.constant.Rule;
+
 public class Score {
 
 	private int strike;
@@ -44,5 +46,9 @@ public class Score {
 
 	public int getBall() {
 		return ball;
+	}
+
+	public boolean isCorrect() {
+		return strike == Rule.NUMBER_LENGTH;
 	}
 }
