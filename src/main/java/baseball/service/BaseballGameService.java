@@ -19,10 +19,10 @@ public class BaseballGameService {
 
 	private BaseballGame play(BaseballGame baseballGame) {
 		baseballGame.makeAnswer();
+		NumberView numberView = new NumberView();
+		ScoreView scoreView = new ScoreView();
 		while (!baseballGame.isCorrect()) {
-			NumberView numberView = new NumberView();
 			baseballGame.calculateScore(numberView.getInput());
-			ScoreView scoreView = new ScoreView();
 			scoreView.print(baseballGame.getScore());
 		}
 		FinishView finishView = new FinishView();

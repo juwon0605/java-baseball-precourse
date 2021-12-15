@@ -40,8 +40,6 @@ public class BaseballGame {
 		}
 
 		this.answer = new Number(answer.toString());
-		//log
-		System.out.println(answer);
 	}
 
 	public void calculateScore(Number number) {
