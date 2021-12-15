@@ -13,6 +13,7 @@ public class BaseballGameService {
 			baseballGame = play(baseballGame);
 		}
 
+		baseballGame = play(baseballGame);
 	}
 
 	private BaseballGame play(BaseballGame baseballGame) {
