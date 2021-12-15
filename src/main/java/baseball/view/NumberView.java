@@ -7,10 +7,9 @@ import camp.nextstep.edu.missionutils.Console;
 public class NumberView {
 
 	public Number getInput() {
-		System.out.println(Message.INPUT_MESSAGE_NUMBER);
+		System.out.print(Message.INPUT_MESSAGE_NUMBER);
 		try {
 			String input = Console.readLine();
-			System.out.println();
 			return new Number(input);
 		} catch (IllegalArgumentException e) {
 			System.out.println(Message.ERROR + e.getMessage() + "\n");

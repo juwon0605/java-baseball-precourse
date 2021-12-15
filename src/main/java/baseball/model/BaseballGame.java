@@ -38,7 +38,7 @@ public class BaseballGame {
 	}
 
 	public void calculateScore(Number number) {
-
+		score = new Score(answer, number);
 	}
 
 	public boolean isFinish() {
