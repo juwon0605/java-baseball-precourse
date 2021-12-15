@@ -10,26 +10,22 @@ public class BaseballGameService {
 	public void playUntilUserFinish(BaseballGame baseballGame) {
 
 		while (!baseballGame.isFinish()) {
+			baseballGame.initializeScore();
 			baseballGame = play(baseballGame);
 		}
 
-		baseballGame = play(baseballGame);
 	}
 
 	private BaseballGame play(BaseballGame baseballGame) {
 		baseballGame.makeAnswer();
-
-		NumberView numberView = new NumberView();
-		baseballGame.calculateScore(numberView.getInput());
-
-		ScoreView scoreView = new ScoreView();
-		scoreView.print(baseballGame.getScore());
-
-		if (baseballGame.isCorrect()) {
-			StateView stateView = new StateView();
-			baseballGame.setState(stateView.getInput());
+		while (!baseballGame.isCorrect()) {
+			NumberView numberView = new NumberView();
+			baseballGame.calculateScore(numberView.getInput());
+			ScoreView scoreView = new ScoreView();
+			scoreView.print(baseballGame.getScore());
 		}
-
+		StateView stateView = new StateView();
+		baseballGame.setState(stateView.getInput());
 		return baseballGame;
 	}
 }

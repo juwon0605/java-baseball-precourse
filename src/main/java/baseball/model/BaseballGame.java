@@ -12,6 +12,11 @@ public class BaseballGame {
 	private Score score;
 	private State state;
 
+	public BaseballGame() {
+		score = new Score();
+		state = new State(Rule.STATE_RESTART);
+	}
+
 	public Score getScore() {
 		return score;
 	}
@@ -35,9 +40,6 @@ public class BaseballGame {
 		}
 
 		this.answer = new Number(answer.toString());
-
-		//log
-		System.out.println(answer);
 	}
 
 	public void calculateScore(Number number) {
@@ -48,7 +50,11 @@ public class BaseballGame {
 		return score.isCorrect();
 	}
 
+	public void initializeScore() {
+		score = new Score();
+	}
+
 	public boolean isFinish() {
-		return true;
+		return state.isFinish();
 	}
 }

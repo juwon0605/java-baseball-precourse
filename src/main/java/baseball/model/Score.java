@@ -7,6 +7,11 @@ public class Score {
 	private int strike;
 	private int ball;
 
+	public Score() {
+		strike = 0;
+		ball = 0;
+	}
+
 	public Score(Number answer, Number input) {
 		strike = calculateStrike(answer, input);
 		ball = calculateBall(answer, input);
