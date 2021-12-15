@@ -7,7 +7,6 @@ import camp.nextstep.edu.missionutils.Console;
 public class StateView {
 
 	public State getInput() {
-		System.out.println(Message.OUTPUT_MESSAGE_FINISH);
 		System.out.println(Message.INPUT_MESSAGE_STATE);
 		try {
 			String input = Console.readLine();

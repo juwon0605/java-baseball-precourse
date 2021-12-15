@@ -1,5 +1,9 @@
 package baseball.model;
 
+import baseball.constant.Rule;
+import baseball.util.NumberChecker;
+import baseball.util.StringChecker;
+
 public class Number {
 
 	private final String number;
@@ -10,7 +14,11 @@ public class Number {
 	}
 
 	private void checkInput(String input) {
+		NumberChecker numberChecker = new NumberChecker();
+		numberChecker.isPositiveInteger(input);
 
+		StringChecker stringChecker = new StringChecker();
+		stringChecker.isCorrectLength(input, Rule.NUMBER_LENGTH);
 	}
 
 	public int length() {

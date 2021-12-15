@@ -14,7 +14,7 @@ public class BaseballGame {
 
 	public BaseballGame() {
 		score = new Score();
-		state = new State(Rule.STATE_RESTART);
+		state = new State(Option.STATE_RESTART);
 	}
 
 	public Score getScore() {
@@ -40,6 +40,8 @@ public class BaseballGame {
 		}
 
 		this.answer = new Number(answer.toString());
+		//log
+		System.out.println(answer);
 	}
 
 	public void calculateScore(Number number) {
